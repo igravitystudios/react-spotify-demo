@@ -1,4 +1,4 @@
-# 🎧 📲 🎶 React Spotify Demo
+# 🎧 🎶 📲 React Spotify Demo
 
 ---
 
