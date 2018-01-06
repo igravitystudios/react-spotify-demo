@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  margin: 24px auto;
+  padding: 24px 8px;
+}
+
+.footer hr {
+  width: 90%;
+  height: 1px;
+  margin: 0 auto 48px;
+  background: #fafafa;
+  border: none;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.plug {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12px;
+}
+
+.plug p {
+  line-height: 1.4;
+}
+
+.plug p:first-child {
+  margin-bottom: 18px;
+}
+
+.plug p a {
+  display: block;
+}

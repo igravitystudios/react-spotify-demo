@@ -1,20 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import { Route } from 'react-router-dom';
+import parseLocationHash from './utils/parseLocationHash';
+
+import Footer from './Footer';
+import Home from './Home';
+import Search from './Search';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    let authorized;
+    if (this.props.location && this.props.location.pathname === '/authorized') {
+      authorized = parseLocationHash(this.props.location.hash);
+    }
+
+    this.state = {
+      isAuthorized: authorized ? true : false,
+      accessToken: authorized ? authorized.access_token : null,
+    };
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Hello, azPHP!</h1>
-          <h1 className="App-title">Welcome to the React Spotify Demo</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Fragment>
+        <Route exact path="/" component={Home} />
+        <Route path="/authorized" component={Search} />
+        <Footer />
+      </Fragment>
     );
   }
 }
