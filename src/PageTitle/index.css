@@ -1,0 +1,18 @@
+.page-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 8px;
+}
+
+.page-title .icon {
+  margin-bottom: 8px;
+}
+
+.page-title .title {
+  color: #fafafa;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}

@@ -1,16 +1,14 @@
 .footer {
   width: 100%;
-  min-height: 240px;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   margin: 24px auto;
-  padding: 24px 8px;
 }
 
 .footer hr {
-  width: 90%;
   height: 1px;
-  margin: 0 auto 48px;
+  margin: 0 16px 48px;
   background: #fafafa;
   border: none;
 }
@@ -21,6 +19,7 @@
   align-items: center;
   width: 100%;
   max-width: 420px;
+  padding: 24px 16px;
   margin: 0 auto;
 }
 
@@ -30,12 +29,15 @@
   margin-left: 12px;
 }
 
-.plug p {
-  line-height: 1.4;
+.plug h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.plug p:first-child {
-  margin-bottom: 18px;
+.plug p {
+  line-height: 1.4;
+  margin-top: 18px;
 }
 
 .plug p a {

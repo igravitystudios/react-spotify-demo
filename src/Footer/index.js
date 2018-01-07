@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-import Technolologist from '../common/icons/Technolologist';
+import Technolologist from '../icons/Technolologist';
 
 const Footer = () => (
   <div className="footer">
@@ -12,13 +12,13 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Technolologist width="120" />
+        <Technolologist width="96" />
       </a>
       <div className="plug">
+        <h4>Need help with your frontend development?</h4>
         <p>
-          I'd love to help you and/or your team build extraordinary frontend
-          user interfaces and experiences using React.js for web and native
-          apps.
+          I'd love to work with you and your team to build extraordinary user
+          interfaces and experiences using React.js for web and native apps.
         </p>
         <p>
           I'm available for contract via

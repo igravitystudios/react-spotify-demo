@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import parseLocationHash from './utils/parseLocationHash';
 
-import Footer from './Footer';
 import Home from './Home';
-import Search from './Search';
+import AuthorizedLayout from './AuthorizedLayout';
+import Footer from './Footer';
 
 class App extends Component {
   constructor(props) {
@@ -16,16 +16,28 @@ class App extends Component {
     }
 
     this.state = {
-      isAuthorized: authorized ? true : false,
       accessToken: authorized ? authorized.access_token : null,
     };
+
+    if (authorized) {
+      this.props.history.replace('/search');
+    }
   }
 
   render() {
     return (
       <Fragment>
-        <Route exact path="/" component={Home} />
-        <Route path="/authorized" component={Search} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route
+            render={props => (
+              <AuthorizedLayout
+                accessToken={this.state.accessToken}
+                {...props}
+              />
+            )}
+          />
+        </Switch>
         <Footer />
       </Fragment>
     );

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './index.css';
 
-import Logo from '../common/icons/Logo';
+import Logo from '../icons/Logo';
 
 const authorizeUrl =
   `https://accounts.spotify.com/authorize` +
