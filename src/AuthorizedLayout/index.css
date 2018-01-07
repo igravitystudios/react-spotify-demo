@@ -1,3 +1,4 @@
 .route {
-  min-height: calc(100vh - 80px);
+  min-height: calc(90vh - 80px);
+  padding: 8px;
 }

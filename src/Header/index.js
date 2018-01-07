@@ -9,7 +9,7 @@ const Header = ({ user }) => (
     <Logo className="logo" width="64" height="64" />
     {user && (
       <div className="profile">
-        <div className="profile-wrapper">
+        <div className="profile-info">
           <div className="profile-name">{user.display_name || user.id}</div>
           <Link to="/" className="profile-logout">
             Log out

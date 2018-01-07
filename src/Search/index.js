@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import axiosClient from '../utils/axiosClient';
 
 import Artist from '../icons/Artist';
 import PageTitle from '../PageTitle';
 import SearchBox from '../SearchBox';
+import SearchResults from '../SearchResults';
 
 class Search extends Component {
   state = {
@@ -13,8 +14,6 @@ class Search extends Component {
 
   onSearch = query => {
     if (query) {
-      console.log(query);
-
       axiosClient
         .get('/search', {
           params: {
@@ -36,10 +35,11 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <PageTitle icon={<Artist />} title="Artist search" />
+      <Fragment>
+        <PageTitle icon={<Artist />} title="Artist Search" />
         <SearchBox onSubmit={this.onSearch} />
-      </div>
+        <SearchResults items={this.state.results && this.state.results.items} />
+      </Fragment>
     );
   }
 }

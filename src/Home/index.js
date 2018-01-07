@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './index.css';
 
 import Logo from '../icons/Logo';
+import Button from '../Button';
 
 const callbackUrl =
   process.env.NODE_ENV !== 'production'
@@ -30,9 +31,9 @@ class Home extends Component {
           <Logo className="logo" width="240" height="240" />
           <h1 className="title">React Spotify Demo</h1>
           <h2 className="subtitle">azPHP Meetup – January 2018</h2>
-          <a className="button" href={authorizeUrl}>
+          <Button element="a" href={authorizeUrl}>
             Log in with Spotify
-          </a>
+          </Button>
           <a
             className="learn-more"
             href="https://github.com/chrisheninger/react-spotify-demo"

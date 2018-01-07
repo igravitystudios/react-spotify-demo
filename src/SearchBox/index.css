@@ -1,0 +1,35 @@
+.search-form {
+  display: flex;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.search-form input {
+  display: block;
+  width: 100%;
+  height: 46px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid #fafafa;
+  border-radius: 4px;
+  padding: 10px 12px;
+  appearance: none; /* Reset default inputs for iOS/etc. */
+  box-shadow: none; /* Reset default inputs for mozilla */
+}
+
+.search-form input:focus {
+  outline: none; /* Disable default focus glow */
+  box-shadow: 0px 0px 0px 2px #61dafb; /* Add back focus style */
+}
+
+.search-form input:disabled {
+  cursor: not-allowed;
+}
+
+.search-form .button {
+  margin-left: 6px;
+}

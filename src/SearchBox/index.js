@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './index.css';
+
+import Button from '../Button';
 
 class SearchBox extends Component {
   state = {
@@ -20,14 +23,17 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="search-form" onSubmit={this.onSubmit}>
         <input
+          className="input"
           type="text"
           name="search"
+          placeholder="Search by artist name"
           onChange={this.onChange}
           value={this.state.query}
+          autoFocus
         />
-        <button type="submit">Search</button>
+        <Button type="submit">&rarr;</Button>
       </form>
     );
   }

@@ -1,0 +1,36 @@
+.search-results {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.search-results .result {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin: 8px;
+}
+
+.search-results .result > * + * {
+  margin-left: 12px;
+}
+
+.search-results .result-image {
+  display: flex;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.search-results .result-image img {
+  width: 100%;
+}
+
+.search-results .result-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+}
