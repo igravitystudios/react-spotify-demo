@@ -6,7 +6,7 @@ import Logo from '../icons/Logo';
 const callbackUrl =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:3000/authorized'
-    : 'https://react-spotify-demo.netlify.com/authorized';
+    : 'https://react-spotify-demo.igravitystudios.com/authorized';
 const clientId = '5cc0bd96989c4597a304b9d56519429b';
 const authorizeUrl =
   `https://accounts.spotify.com/authorize` +
