@@ -3,10 +3,15 @@ import './index.css';
 
 import Logo from '../icons/Logo';
 
+const callbackUrl =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:3000/authorized'
+    : 'https://react-spotify-demo.netlify.com/authorized';
+const clientId = '5cc0bd96989c4597a304b9d56519429b';
 const authorizeUrl =
   `https://accounts.spotify.com/authorize` +
-  `?client_id=5cc0bd96989c4597a304b9d56519429b` +
-  `&redirect_uri=${encodeURIComponent('http://localhost:3000/authorized')}` +
+  `?client_id=${clientId}` +
+  `&redirect_uri=${encodeURIComponent(callbackUrl)}` +
   `&response_type=token`;
 
 class Home extends Component {
