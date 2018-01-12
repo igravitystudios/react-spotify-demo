@@ -1,8 +1,9 @@
 import React from 'react';
+import classNames from 'classnames';
 import './index.css';
 
-const Button = ({ children, element: Element, ...rest }) => (
-  <Element className="button" {...rest}>
+const Button = ({ children, className, element: Element, ...rest }) => (
+  <Element className={classNames('button', className)} {...rest}>
     {children}
   </Element>
 );

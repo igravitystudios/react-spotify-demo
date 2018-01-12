@@ -33,7 +33,7 @@ class SearchBox extends Component {
           value={this.state.query}
           autoFocus
         />
-        <Button type="submit">&rarr;</Button>
+        <Button type="submit">Search</Button>
       </form>
     );
   }

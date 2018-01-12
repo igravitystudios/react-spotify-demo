@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import './index.css';
 
 import axiosClient from '../utils/axiosClient';
 
 import Header from '../Header';
 import Search from '../Search';
+import Artist from '../Artist';
+import Album from '../Album';
 
 class AuthorizedLayout extends Component {
   constructor(props) {
@@ -48,9 +50,13 @@ class AuthorizedLayout extends Component {
         <Header user={this.state.user} />
         <div className="route">
           <Switch>
-            <Route exact path="/search">
-              <Search {...this.props} />
-            </Route>
+            <Route exact path="/search" component={Search} />
+            <Route exact path="/artist/:artistId" component={Artist} />
+            <Route
+              exact
+              path="/artist/:artistId/album/:albumId"
+              component={Album}
+            />
           </Switch>
         </div>
       </Fragment>
@@ -58,4 +64,4 @@ class AuthorizedLayout extends Component {
   }
 }
 
-export default AuthorizedLayout;
+export default withRouter(AuthorizedLayout);

@@ -42,3 +42,7 @@ a {
   align-items: space-between;
   justify-content: space-between;
 }
+
+.circle {
+  border-radius: 100%;
+}

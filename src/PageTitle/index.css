@@ -7,7 +7,7 @@
 }
 
 .page-title .icon {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .page-title .title {
@@ -15,4 +15,8 @@
   font-size: 32px;
   font-weight: 700;
   text-align: center;
+}
+
+.page-title .back {
+  align-self: flex-start;
 }

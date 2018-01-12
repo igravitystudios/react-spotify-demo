@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 import Logo from '../icons/Logo';
@@ -15,35 +16,37 @@ const authorizeUrl =
   `&redirect_uri=${encodeURIComponent(callbackUrl)}` +
   `&response_type=token`;
 
-class Home extends Component {
-  render() {
-    return (
-      <Fragment>
-        <a
-          className="github-fork-ribbon"
-          href="https://github.com/chrisheninger/react-spotify-demo"
-          data-ribbon="View Source on GitHub"
-          title="View Source on GitHub"
-        >
-          View Source on GitHub
-        </a>
-        <div className="home">
-          <Logo className="logo" width="240" height="240" />
-          <h1 className="title">React Spotify Demo</h1>
-          <h2 className="subtitle">azPHP Meetup – January 2018</h2>
-          <Button element="a" href={authorizeUrl}>
-            Log in with Spotify
-          </Button>
-          <a
-            className="learn-more"
-            href="https://github.com/chrisheninger/react-spotify-demo"
-          >
-            Learn More
-          </a>
-        </div>
-      </Fragment>
-    );
-  }
-}
+const Home = ({ isAuthorized }) => (
+  <Fragment>
+    <a
+      className="github-fork-ribbon"
+      href="https://github.com/chrisheninger/react-spotify-demo"
+      data-ribbon="View Source on GitHub"
+      title="View Source on GitHub"
+    >
+      View Source on GitHub
+    </a>
+    <div className="home">
+      <Logo className="logo" width="240" height="240" />
+      <h1 className="title">React Spotify Demo</h1>
+      <h2 className="subtitle">azPHP Meetup – January 2018</h2>
+      {!isAuthorized ? (
+        <Button element="a" href={authorizeUrl}>
+          Sign in with Spotify
+        </Button>
+      ) : (
+        <Link className="button" to="/search">
+          You are already signed in
+        </Link>
+      )}
+      <a
+        className="learn-more"
+        href="https://github.com/chrisheninger/react-spotify-demo"
+      >
+        Learn More
+      </a>
+    </div>
+  </Fragment>
+);
 
 export default Home;

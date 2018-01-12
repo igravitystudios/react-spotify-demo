@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font: inherit;
   color: #fafafa;
   background: #1db954;
   border: 1px solid transparent;

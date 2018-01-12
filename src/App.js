@@ -28,15 +28,10 @@ class App extends Component {
     return (
       <Fragment>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            render={props => (
-              <AuthorizedLayout
-                accessToken={this.state.accessToken}
-                {...props}
-              />
-            )}
-          />
+          <Route exact path="/">
+            <Home isAuthorized={this.state.accessToken} />
+          </Route>
+          <AuthorizedLayout accessToken={this.state.accessToken} />
         </Switch>
         <Footer />
       </Fragment>

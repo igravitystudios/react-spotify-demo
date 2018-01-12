@@ -12,6 +12,12 @@
   margin: 8px;
 }
 
+.search-results .result:hover {
+  opacity: 0.88;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
 .search-results .result > * + * {
   margin-left: 12px;
 }
@@ -19,8 +25,8 @@
 .search-results .result-image {
   display: flex;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   border-radius: 100%;
   overflow: hidden;
 }
