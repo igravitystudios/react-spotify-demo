@@ -49,6 +49,10 @@ class App extends Component {
       .catch(error => {
         console.log(error);
 
+        this.setState({
+          accessToken: null,
+        });
+
         return this.props.history.push({
           pathname: '/',
           state: { from: this.props.location },
