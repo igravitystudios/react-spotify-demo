@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 
+import ArrowRight from '../icons/ArrowRight';
+
 class SearchResults extends Component {
   renderResult(result) {
     return (
@@ -16,6 +18,9 @@ class SearchResults extends Component {
           />
         </div>
         <div className="result-name">{result.name}</div>
+        <div className="result-icon">
+          <ArrowRight />
+        </div>
       </Link>
     );
   }

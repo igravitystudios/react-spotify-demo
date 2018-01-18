@@ -8,6 +8,10 @@ class SearchBox extends Component {
     query: '',
   };
 
+  componentDidMount() {
+    this.input.focus();
+  }
+
   onChange = e => {
     const newValue = e.target.value;
     this.setState({
@@ -19,19 +23,22 @@ class SearchBox extends Component {
     e.preventDefault();
 
     this.props.onSubmit(this.state.query);
+    this.input.blur();
   };
 
   render() {
     return (
       <form className="search-form" onSubmit={this.onSubmit}>
         <input
+          ref={input => {
+            this.input = input;
+          }}
           className="input"
           type="text"
           name="search"
           placeholder="Search by artist name"
           onChange={this.onChange}
           value={this.state.query}
-          autoFocus
         />
         <Button type="submit">Search</Button>
       </form>

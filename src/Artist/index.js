@@ -56,7 +56,7 @@ class Artist extends Component {
         <PageTitle
           icon={<img className="circle" src={artistPhoto} alt="Artist cover" />}
           title={artistName}
-          backTo="⬅ Back to search"
+          canGoBack
         />
         <ArtistResults artistId={artistId} items={albums} />
       </Fragment>

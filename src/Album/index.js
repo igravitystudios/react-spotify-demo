@@ -4,7 +4,7 @@ import get from 'lodash/get';
 import axiosClient from '../utils/axiosClient';
 
 import PageTitle from '../PageTitle';
-// import AlbumResults from '../AlbumResults';
+import AlbumResults from '../AlbumResults';
 
 class Album extends Component {
   state = {
@@ -37,16 +37,15 @@ class Album extends Component {
     const albumPhoto = get(this.state, 'album.images[0].url');
     const albumName = get(this.state, 'album.name');
     const tracks = get(this.state, 'album.tracks.items');
-    console.log('tracks', tracks);
 
     return (
       <Fragment>
         <PageTitle
           icon={<img className="circle" src={albumPhoto} alt="Album cover" />}
           title={albumName}
-          backTo="⬅ Back to artist"
+          canGoBack
         />
-        {/* <AlbumResults items={tracks} /> */}
+        <AlbumResults items={tracks} />
       </Fragment>
     );
   }

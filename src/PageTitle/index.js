@@ -4,13 +4,14 @@ import { withRouter } from 'react-router-dom';
 import './index.css';
 
 import Button from '../Button';
+import ArrowLeft from '../icons/ArrowLeft';
 
-const PageTitle = ({ backTo, history, icon, title }) => {
+const PageTitle = ({ canGoBack, history, icon, title }) => {
   return (
     <div className="page-title">
-      {backTo && (
+      {canGoBack && (
         <Button className="back" onClick={history.goBack}>
-          {backTo}
+          <ArrowLeft />
         </Button>
       )}
       {icon && (
@@ -27,7 +28,7 @@ const PageTitle = ({ backTo, history, icon, title }) => {
 };
 
 PageTitle.propTypes = {
-  backTo: PropTypes.string,
+  canGoBack: PropTypes.bool,
   icon: PropTypes.element,
   title: PropTypes.string.isRequired,
 };
