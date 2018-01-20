@@ -3,6 +3,7 @@ import get from 'lodash/get';
 
 import axiosClient from '../utils/axiosClient';
 
+import Loading from '../Loading';
 import PageTitle from '../PageTitle';
 import ArtistResults from '../ArtistResults';
 
@@ -43,7 +44,7 @@ class Artist extends Component {
 
   render() {
     if (!this.state.albums || !this.state.artist) {
-      return <div>Loading</div>;
+      return <Loading />;
     }
 
     const artistPhoto = get(this.state, 'artist.images[0].url');

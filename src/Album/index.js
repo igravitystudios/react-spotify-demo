@@ -3,6 +3,7 @@ import get from 'lodash/get';
 
 import axiosClient from '../utils/axiosClient';
 
+import Loading from '../Loading';
 import PageTitle from '../PageTitle';
 import AlbumResults from '../AlbumResults';
 
@@ -31,7 +32,7 @@ class Album extends Component {
 
   render() {
     if (!this.state.album) {
-      return <div>Loading</div>;
+      return <Loading />;
     }
 
     const albumPhoto = get(this.state, 'album.images[0].url');

@@ -9,10 +9,6 @@ import Album from '../Album';
 
 class AuthorizedLayout extends Component {
   render() {
-    if (!this.props.user) {
-      return <div>Loading</div>;
-    }
-
     return (
       <Fragment>
         <Header user={this.props.user} />
