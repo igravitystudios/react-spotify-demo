@@ -2,24 +2,38 @@
 
 # 🎧 🎶 📲 React Spotify Demo
 
-This is a React Spotify Demo app for the January 2018 azPHP Meetup.
-
-App flow:
+## App flow:
 
 1. Intro
 
-   * https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/
-   * https://css-tricks.com/learning-react-router/
+   * [Bootstrap with Create React App](https://github.com/facebookincubator/create-react-app)
+   * [Robust React User Interfaces with Finite State Machines](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/)
+   * [Learning React Router](https://css-tricks.com/learning-react-router/)
 
 1. Login
 
-   * [Implicit grant flow](https://developer.spotify.com/web-api/authorization-guide/#implicit_grant_flow)
+   * [Spotify API: Implicit grant flow](https://developer.spotify.com/web-api/authorization-guide/#implicit_grant_flow)
 
-1. Search box
-1. Search results
+1. Search box / search results
+
+   * [Spotify API: Search for an artist](https://developer.spotify.com/web-api/search-item/)
+
 1. Artist
+
+   * [Spotify API: Get an artist](https://developer.spotify.com/web-api/get-artist/)
+   * [Spotify API: Get an artist's albums](https://developer.spotify.com/web-api/get-artists-albums/)
+
 1. Album
+
+   * [Spotify API: Get an album](https://developer.spotify.com/web-api/get-album/)
+
 1. Song
+
+## About
+
+React Spotify Demo was built as a proof-of-concept by Chris Heninger ([@chrisheninger](https://github.com/chrisheninger)) for the January 2018 azPHP Meetup.
+
+This project is sponsored by [iGravity Studios](https://igravitystudios.com)– a custom software shop with an emphasis on UI/UX development using React.js– based in Phoenix, Arizona.
 
 ---
 
