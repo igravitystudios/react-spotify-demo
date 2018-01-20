@@ -20,7 +20,7 @@ const Home = ({ isAuthorized }) => (
   <Fragment>
     <a
       className="github-fork-ribbon"
-      href="https://github.com/chrisheninger/react-spotify-demo"
+      href="https://github.com/igravitystudios/react-spotify-demo"
       data-ribbon="View Source on GitHub"
       title="View Source on GitHub"
     >
@@ -41,7 +41,7 @@ const Home = ({ isAuthorized }) => (
       )}
       <a
         className="learn-more"
-        href="https://github.com/chrisheninger/react-spotify-demo"
+        href="https://github.com/igravitystudios/react-spotify-demo"
       >
         Learn More
       </a>
