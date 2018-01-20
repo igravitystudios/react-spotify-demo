@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import { BrowserRouter, Route } from 'react-router-dom';
-import registerServiceWorker from './registerServiceWorker';
+import ScrollTop from './ScrollTop';
 
 import './reset.css';
 import './base.css';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route component={App} />
+    <ScrollTop>
+      <Route component={App} />
+    </ScrollTop>
   </BrowserRouter>,
   document.getElementById('root')
 );
-
-registerServiceWorker();
