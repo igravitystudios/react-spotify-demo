@@ -1,4 +1,5 @@
 <img src="./react-spotify.png" alt="React Spotify Demo Logo" width="240" />
+
 # 🎧 🎶 📲 React Spotify Demo
 
 This is a React Spotify Demo app for the January 2018 azPHP Meetup.
