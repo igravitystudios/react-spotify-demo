@@ -42,7 +42,8 @@ class App extends Component {
       .get('/me', {})
       .then(response => {
         console.log(response);
-        return this.setState(() => ({
+
+        this.setState(() => ({
           user: response.data,
         }));
       })

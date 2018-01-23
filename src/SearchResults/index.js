@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 
+import Loading from '../Loading';
 import ArrowRight from '../icons/ArrowRight';
 
 class SearchResults extends Component {
@@ -26,6 +27,10 @@ class SearchResults extends Component {
   }
 
   render() {
+    if (this.props.loading) {
+      return <Loading />;
+    }
+
     if (!this.props.items) {
       return null;
     }

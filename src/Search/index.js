@@ -10,10 +10,15 @@ import SearchResults from '../SearchResults';
 class Search extends Component {
   state = {
     results: null,
+    loading: false,
   };
 
   onSearch = query => {
     if (query) {
+      this.setState(() => ({
+        loading: true,
+      }));
+
       axiosClient
         .get('/search', {
           params: {
@@ -23,12 +28,17 @@ class Search extends Component {
         })
         .then(response => {
           console.log(response);
-          return this.setState(() => ({
+
+          this.setState(() => ({
             results: response.data && response.data.artists,
+            loading: false,
           }));
         })
         .catch(error => {
           console.error(error);
+          this.setState(() => ({
+            loading: true,
+          }));
         });
     }
   };
@@ -38,7 +48,10 @@ class Search extends Component {
       <Fragment>
         <PageTitle icon={<Artist />} title="Artist Search" />
         <SearchBox onSubmit={this.onSearch} />
-        <SearchResults items={this.state.results && this.state.results.items} />
+        <SearchResults
+          loading={this.state.loading}
+          items={this.state.results && this.state.results.items}
+        />
       </Fragment>
     );
   }
