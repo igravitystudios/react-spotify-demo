@@ -2,6 +2,8 @@
 
 # 🎧 🎶 📲 React Spotify Demo
 
+Slides: https://docs.google.com/presentation/d/1j2XzhgTDBZifZVuJvqBK7iOA26Xy3xUwcuRGNblRygU/edit?usp=sharing
+
 #### App flow:
 
 1. Intro
