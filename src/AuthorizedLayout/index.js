@@ -16,11 +16,9 @@ class AuthorizedLayout extends Component {
           <Switch>
             <Route exact path="/search" component={Search} />
             <Route exact path="/artist/:artistId" component={Artist} />
-            <Route
-              exact
-              path="/artist/:artistId/album/:albumId"
-              component={Album}
-            />
+            <Route exact path="/artist/:artistId/album/:albumId">
+              <Album playUri={this.props.playUri} />
+            </Route>
           </Switch>
         </div>
       </Fragment>
