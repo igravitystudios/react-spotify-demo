@@ -30,6 +30,14 @@
 
 1. Song
 
+## Getting Started
+
+* Have node/npm installed on your machine
+* Clone the repository
+* Run `npm install` to install dependencies
+* Run `npm start` to run app
+* Check your browser at http://localhost:3000
+
 ## About
 
 React Spotify Demo was built as a proof-of-concept by Chris Heninger ([@chrisheninger](https://github.com/chrisheninger)) for the January 2018 azPHP Meetup.
