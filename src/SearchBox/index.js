@@ -28,7 +28,7 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <form className="search-form" onSubmit={this.onSubmit}>
+      <form className="search-form" onSubmit={this.onSubmit} autoComplete="off">
         <input
           ref={input => {
             this.input = input;

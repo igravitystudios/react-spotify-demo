@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { withRouter } from 'react-router';
 import get from 'lodash/get';
 
 import axiosClient from '../utils/axiosClient';
@@ -46,10 +47,10 @@ class Album extends Component {
           title={albumName}
           canGoBack
         />
-        <AlbumResults items={tracks} />
+        <AlbumResults playUri={this.props.playUri} items={tracks} />
       </Fragment>
     );
   }
 }
 
-export default Album;
+export default withRouter(Album);
