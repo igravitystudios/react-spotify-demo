@@ -31,6 +31,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
+  color: #fafafa;
   font-size: 28px;
   border-radius: 100%;
   overflow: hidden;
@@ -39,12 +40,15 @@
 }
 
 .album-results .result-name {
+  color: #fafafa;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.4;
 }
 
 .album-results .result-icon {
+  color: #fafafa;
+  fill: transparent;
   flex-shrink: 0;
   width: 32px;
   height: 32px;

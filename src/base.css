@@ -29,6 +29,21 @@ html {
   box-sizing: inherit;
 }
 
+/* Reset `button` to nothing */
+button {
+  display: inline-block;
+  font: inherit;
+  appearance: none;
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
 /* Globals */
 a {
   color: #fafafa;
